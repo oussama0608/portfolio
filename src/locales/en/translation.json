@@ -1,117 +1,16 @@
 {
-  "nav": {
-    "home": "Home",
-    "about": "About",
-    "experience": "Experience",
-    "tech": "Tech",
-    "works": "Works",
-    "feedbacks": "Feedbacks",
-    "contact": "Contact"
-  },
-    "hero": {
-      "greeting": "Hello, I'm",
-      "description1": "I develop 3D visualizations, User Interfaces, ",
-      "description2":"and web applications."
-    },
-    "services": {
-      "frontendDeveloper": "Frontend Developer",
-      "agileMethodologies": "Agile Methodologies",
-      "backendDeveloper": "Backend Developer",
-      "graphicDesigner": "Graphic Designer"
-    },
-    "experiences": {
-      "sectionSubText": "What I've done so far",
-      "sectionHeadText": "Experience",
-      "jobs": [
-        {
-          "title": "Academic Project",
-          "company_name": "Tunisian Treasury",
-          "date": "Sept 2014 - Jun 2015",
-          "points": [
-            "This project involves the development of a desktop application aimed at comprehensive tax management for businesses.",
-            "The application will allow businesses to calculate and manage various taxes such as VAT, income tax, local taxes, and any other tax obligations.",
-            "The application will calculate taxes, manage tax debts, and generate reports for tax returns at the end of the year.",
-            "Development of desktop application in C#, HTML, and CSS."
-          ]
-        },
-        {
-          "title": "Preparatory Studies for Engineering Schools",
-        "company": "Faculty of Science: Tunisia",
-        "date": "Sept 2009 - Jun 2012",
-        "points": [
-          "Three years of intensive training in mathematics, physical sciences, and basic engineering concepts.",
-          "Acquired a solid foundation in areas such as calculus, algebra, physics, and chemistry.",
-          "Preparation for entrance exams to engineering schools."
-        ]
-        },
-        {
-          "title": "Bachelor's Degree in Computer Science",
-        "company": "Faculty of Science: Tunisia",
-        "date": "Jan 2022 - Jan 2023",
-        "points": [
-          "Three-year program focused on theoretical and practical fundamentals of computer science.",
-          "Extensive coverage in areas such as programming, algorithms, databases, and operating systems.",
-          "Acquired skills in software development, data analysis, and problem-solving."
-        ]
-        },
-        {
-          "title": "Fullstack Development Bootcamp",
-        "company": "Peñascal Koop. Bilbao, Spain",
-        "date": "Nov 2023 - Now",
-        "points": [
-          "Intensive 7-month web development training program.",
-          "Mastery of front-end technologies like HTML5, CSS3, JavaScript, with experience in frameworks like VueJs and ReactJs.",
-          "Solid understanding of responsive design using Tailwind CSS and experience in creating user interfaces with Figma.",
-          "Familiarity with version control tools like Git and skills in creating Docker containers for application deployment.",
-          "Practical experience applying agile methodologies like Scrum and Kanban for efficient project management, based on real projects developed during the bootcamp.",
-          "Acquired skills for problem-solving, decision-making, and handling pressure situations, applied in the context of software development projects during the bootcamp."
-        ]
-        }
-        
-      ]
-    },
-"projects": {
-      "mariFarma": {
-        "name": "Online Store",
-        "description": "This project is a website called MariFarma, providing information and access to various health and wellness products. It offers categories such as Medications, Natural Care, Herbs, and Orthopedics. The website features functionalities like language selection, product search, and adding products to favorites and the shopping cart."
-      },
-      "musicPlayer": {
-        "name": "Music Player",
-        "description": "This project is a simple music player built using JavaScript and the Web Audio API (Using Array methods: map(), filter(), find(), join(), sort(), indexOf())."
-      },
-      "vueSport": {
-        "name": "VueSport",
-        "description": "This website was created by students of the Peñascal F5 bootcamp for educational purposes. The entire project was developed in an estimated time of 2 weeks. The group was organized and worked with agile methodologies, organizing the group with its corresponding Scrum and Product Owner."
-      }
-    },
-"about":{
-      "intro":"Introduction",
-      "overview":"Overview.",
-      "whoami":"I am a software developer with experience in TypeScript and JavaScript, and specialized in frameworks such as React, Node.js, and Three.js. I am a fast learner and collaborate closely with the team to create efficient, scalable, and user-friendly solutions that solve real-world problems."
-    },
-"works": {
-    "sectionSubText": "My work",
-    "sectionHeadText": "Projects.",
-    "description": "These are some of the projects I have developed during my participation in a fullstack bootcamp. Each of them exemplifies my skills and experience in action, showing how I have applied my knowledge in real-world situations. For each project, I will provide a brief description along with links to code repositories and live demos. These projects are proof of my ability to tackle complex challenges, adapt to various technologies, and effectively manage projects. I am excited to share my work with you!"
-    },
-"feedback":{
-  "sectionSubText":"What others say",
-  "sectionHeadText":"Testimonials"
-},
-"contact": {
-    "subText": "Contact Me",
-    "headText": "Contact.",
+  "contact": {
+    "subText": "Contact",
+    "headText": "Build a small automation MVP.",
     "nameLabel": "Your Name",
-    "namePlaceholder": "What's your name?",
+    "namePlaceholder": "Your name",
     "emailLabel": "Your Email",
-    "emailPlaceholder": "What's your email?",
+    "emailPlaceholder": "Your email",
     "messageLabel": "Your Message",
-    "messagePlaceholder": "What would you like to say?",
-    "send": "Send",
+    "messagePlaceholder": "Tell me what workflow you want to automate",
+    "send": "Send Message",
     "sending": "Sending...",
     "success": "Thank you. I will get back to you as soon as possible.",
-    "error": "Oops, something went wrong! Please try again."
+    "error": "Something went wrong. Please email me directly."
+  }
 }
-
-}
-  

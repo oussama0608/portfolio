@@ -30,27 +30,26 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true); // Muestra un estado de "cargando" mientras se envía el correo.
-  
+    setLoading(true);
+
     emailjs
       .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID, // Service ID desde tu .env
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID, // Template ID desde tu .env
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
-          from_name: form.name, // Nombre del remitente desde el formulario
-          to_name: "Tu Nombre o Empresa", // El destinatario, que serás tú
-          from_email: form.email, // Correo del remitente desde el formulario
-          to_email: "tuemail@ejemplo.com", // Aquí pones tu correo de destino donde recibes el mensaje
-          message: form.message, // El mensaje del remitente desde el formulario
+          from_name: form.name,
+          to_name: "Oussama Brahmi",
+          from_email: form.email,
+          to_email: "your.email@example.com",
+          message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY // Clave pública desde tu .env
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
-          setLoading(false); // Deja de mostrar el estado de "cargando"
-          alert(t('contact.success')); // Muestra una alerta de éxito
-  
-          // Limpia el formulario después de enviarlo
+          setLoading(false);
+          alert(t("contact.success"));
+
           setForm({
             name: "",
             email: "",
@@ -58,76 +57,114 @@ const Contact = () => {
           });
         },
         (error) => {
-          setLoading(false); // Deja de mostrar el estado de "cargando"
-          console.error(error); // Muestra el error en la consola
-  
-          alert(t('contact.error')); // Muestra una alerta de error
+          setLoading(false);
+          console.error(error);
+
+          alert(t("contact.error"));
         }
       );
   };
 
-  
-
   return (
-    <div className="xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden">
+    <div className='xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden'>
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
+        className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
       >
-        <p className={styles.sectionSubText}>{t('contact.subText')}</p>
-        <h3 className={styles.sectionHeadText}>{t('contact.headText')}</h3>
+        <p className={styles.sectionSubText}>{t("contact.subText")}</p>
+        <h3 className={styles.sectionHeadText}>{t("contact.headText")}</h3>
+        <p className='mt-4 text-secondary text-[17px] leading-[30px]'>
+          Have a repetitive workflow, document-heavy process, or lead
+          generation task you want to automate? Contact me and I can help you
+          build a small MVP quickly.
+        </p>
+
+        <div className='mt-8 flex flex-wrap gap-3'>
+          <a
+            href='mailto:your.email@example.com'
+            className='bg-[#915EFF] py-2 px-4 rounded-lg text-white text-[14px] font-semibold'
+          >
+            Email me
+          </a>
+          <a
+            href='#'
+            className='bg-tertiary py-2 px-4 rounded-lg text-white text-[14px] font-semibold'
+          >
+            Upwork profile
+          </a>
+          <a
+            href='https://github.com/oussama2505'
+            target='_blank'
+            rel='noreferrer'
+            className='bg-tertiary py-2 px-4 rounded-lg text-white text-[14px] font-semibold'
+          >
+            GitHub
+          </a>
+          <a
+            href='#'
+            className='bg-tertiary py-2 px-4 rounded-lg text-white text-[14px] font-semibold'
+          >
+            LinkedIn
+          </a>
+        </div>
 
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className="mt-12 flex flex-col gap-8"
+          className='mt-12 flex flex-col gap-8'
         >
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">{t('contact.nameLabel')}</span>
+          <label className='flex flex-col'>
+            <span className='text-white font-medium mb-4'>
+              {t("contact.nameLabel")}
+            </span>
             <input
-              type="text"
-              name="name"
+              type='text'
+              name='name'
               value={form.name}
               onChange={handleChange}
-              placeholder={t('contact.namePlaceholder')}
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              placeholder={t("contact.namePlaceholder")}
+              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">{t('contact.emailLabel')}</span>
+          <label className='flex flex-col'>
+            <span className='text-white font-medium mb-4'>
+              {t("contact.emailLabel")}
+            </span>
             <input
-              type="email"
-              name="email"
+              type='email'
+              name='email'
               value={form.email}
               onChange={handleChange}
-              placeholder={t('contact.emailPlaceholder')}
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              placeholder={t("contact.emailPlaceholder")}
+              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">{t('contact.messageLabel')}</span>
+          <label className='flex flex-col'>
+            <span className='text-white font-medium mb-4'>
+              {t("contact.messageLabel")}
+            </span>
             <textarea
               rows={7}
-              name="message"
+              name='message'
               value={form.message}
               onChange={handleChange}
-              placeholder={t('contact.messagePlaceholder')}
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              placeholder={t("contact.messagePlaceholder")}
+              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
 
           <button
-            type="submit"
-            className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+            type='submit'
+            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
           >
-            {loading ? t('contact.sending') : t('contact.send')}
+            {loading ? t("contact.sending") : t("contact.send")}
           </button>
         </form>
       </motion.div>
 
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
       >
         <EarthCanvas />
       </motion.div>

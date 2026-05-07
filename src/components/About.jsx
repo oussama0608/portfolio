@@ -6,7 +6,6 @@ import { styles } from "../styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
-import { t } from "i18next";
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className='xs:w-[250px] w-full'>
@@ -40,18 +39,28 @@ const About = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>{t('about.intro')}</p>
-        <h2 className={styles.sectionHeadText}>{t('about.overview')}</h2>
+        <p className={styles.sectionSubText}>Introduction</p>
+        <h2 className={styles.sectionHeadText}>About.</h2>
       </motion.div>
-      {t('about.whoami')}
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-      
+        I am a backend developer focused on AI automation, FastAPI, APIs, data
+        processing, and RAG systems. I build practical tools that help
+        businesses reduce manual work, automate repetitive processes, and turn
+        documents or raw data into useful workflows.
       </motion.p>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
+      <span className='hash-span' id='services'>
+        &nbsp;
+      </span>
+      <motion.div variants={textVariant()} className='mt-16'>
+        <p className={styles.sectionSubText}>What I can build</p>
+        <h2 className={styles.sectionHeadText}>Services.</h2>
+      </motion.div>
+
+      <div className='mt-10 flex flex-wrap gap-10'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
@@ -60,4 +69,4 @@ const About = () => {
   );
 };
 
-export default SectionWrapper(About, "Sobre");
+export default SectionWrapper(About, "about");

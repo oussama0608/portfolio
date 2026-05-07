@@ -13,271 +13,186 @@ import {
   nodejs,
   mongodb,
   git,
-  figma,
   docker,
-  tesoreria,
   bilbao,
-  MariFarma,
-  MusicPlayer,
-  VueSport,
   threejs,
-  ingeniero,
-  fsm,
-  Izarza,
 } from "../assets";
 
-
 export const navLinks = [
-  { id: '', title: 'Home' },
-  { id: 'about', title: 'About' },
-  { id: 'experience', title: 'Experience' },
-  { id: 'tech', title: 'Tech' },
-  { id: 'works', title: 'Works' },
-  { id: 'feedbacks', title: 'Feedbacks' },
-  { id: 'contact', title: 'Contact' },
+  { id: "", title: "Home" },
+  { id: "about", title: "About" },
+  { id: "services", title: "Services" },
+  { id: "works", title: "Projects" },
+  { id: "tech", title: "Tech Stack" },
+  { id: "contact", title: "Contact" },
 ];
-
 
 const services = [
   {
-    title: "Desarollador Frontend",
+    title: "AI Automation Backends",
     icon: web,
   },
   {
-    title: "Metodologías ágiles",
+    title: "RAG / Internal Knowledge Base Systems",
     icon: mobile,
   },
   {
-    title: "Desarollador Backend",
+    title: "Lead Generation & Outreach Automation",
     icon: backend,
   },
   {
-    title: "Diseñador gráfico",
+    title: "API Development",
     icon: creator,
+  },
+  {
+    title: "Data Extraction & Processing",
+    icon: backend,
+  },
+  {
+    title: "Google Sheets / CRM / Email Automation",
+    icon: web,
   },
 ];
 
 const technologies = [
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
-  },
+  { name: "Python", icon: backend },
+  { name: "FastAPI", icon: web },
+  { name: "OpenAI API", icon: creator },
+  { name: "LangChain", icon: nodejs },
+  { name: "LlamaIndex", icon: javascript },
+  { name: "PostgreSQL", icon: mongodb },
+  { name: "SQLite", icon: git },
+  { name: "SQLAlchemy", icon: typescript },
+  { name: "Chroma", icon: mongodb },
+  { name: "FAISS", icon: threejs },
+  { name: "Qdrant", icon: threejs },
+  { name: "Docker", icon: docker },
+  { name: "REST APIs", icon: web },
+  { name: "Web Scraping", icon: html },
+  { name: "Google Sheets API", icon: css },
+  { name: "Background Tasks", icon: redux },
+  { name: "Celery", icon: tailwind },
+  { name: "React", icon: reactjs },
 ];
 
 const experiences = [
   {
-    title: "Proyecto Académico",
-    company_name: "Tesorería de Túnez",
-    icon: tesoreria,
+    title: "AI Automation Developer",
+    company_name: "Project-based backend systems",
+    icon: backend,
     iconBg: "#383E56",
-    date: "Sept 2014 - Jun 2015",
+    date: "Current focus",
     points: [
-      "Este proyecto consiste en el desarrollo de una aplicación de escritorio destinada a la gestión integral de impuestos para empresas.",
-      "la aplicación permitirá a las empresas calcular y gestionar diversos impuestos como el IVA, IRPF, impuestos locales y cualquier otra obligación tributaria.",
-      "La aplicación calculará impuestos, gestionará deudas fiscales y generará informes para la presentación de declaraciones fiscales al final del año.",
-      "Desarrollo de aplicación de escritorio en C#, HTML y CSS.",
+      "Build backend workflows that reduce manual work in lead generation, document handling, and internal data organization.",
+      "Connect APIs, databases, background jobs, AI models, and business tools into reliable automation systems.",
+      "Focus on practical MVPs that can be tested quickly and improved with real user feedback.",
     ],
   },
   {
-    title: "Estudios Preparatorios para Escuelas de Ingeniería",
-    company_name: "Faculdad de Sciencia :Túnez",
-    icon: ingeniero,
+    title: "FastAPI Backend Developer",
+    company_name: "API and automation projects",
+    icon: web,
     iconBg: "#E6DEDD",
-    date: "Sept 2009 - Jun 2012",
+    date: "Backend services",
     points: [
-      "Tres años de formación intensiva en matemáticas, ciencias físicas y conceptos básicos de ingeniería.",
-      "Adquisición de una sólida base en áreas como cálculo, álgebra, física y química.",
-      "Preparación para exámenes de ingreso a escuelas de ingeniería.",
+      "Design FastAPI endpoints for data intake, validation, storage, search, and automation workflows.",
+      "Use Python, SQLAlchemy, PostgreSQL or SQLite, background tasks, Docker, and third-party APIs.",
+      "Structure backends so frontend demos, internal tools, or CRM integrations can consume them cleanly.",
     ],
   },
   {
-    title: "Licenciatura en Ciencias de la Computación",
-    company_name: "Faculdad de Sciencia :Túnez",
-    icon: fsm,
+    title: "RAG / Document Processing Systems",
+    company_name: "Internal knowledge base projects",
+    icon: creator,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "AI document workflows",
     points: [
-      "Programa de tres años enfocado en fundamentos teóricos y prácticos de la informática.",
-      "Amplia cobertura en áreas como programación, algoritmos, bases de datos y sistemas operativos.",
-      "Adquisición de habilidades en desarrollo de software, análisis de datos y solución de problemas computacionales.",
+      "Process uploaded documents, split content into chunks, create embeddings, and store knowledge in vector databases.",
+      "Build question-answering endpoints with source-aware responses for internal company files.",
+      "Work with OpenAI API, LangChain or LlamaIndex, Chroma, FAISS, Qdrant, and FastAPI.",
     ],
   },
   {
-    title: "Bootcamp de Desarrollo Fullstack",
-    company_name: "Peñascal Koop. Bilbao,España",
+    title: "Fullstack Development Training",
+    company_name: "Penascal Koop. Bilbao, Spain",
     icon: bilbao,
     iconBg: "#E6DEDD",
-    date: "Nov 2023 - Ahora",
+    date: "Nov 2023 - 2024",
     points: [
-      "Programa intensivo de formación en desarrollo web fullstack durante 7 meses",
-      "Dominio de tecnologías front-end como HTML5, CSS3, JavaScript, con experiencia en frameworks como VueJs y ReactJs.",
-      "Conocimiento sólido en diseño responsivo utilizando Tailwind CSS y experiencia en la creación de interfaces de usuario con Figma.",
-      "Familiaridad con herramientas de control de versiones como Git y habilidades en la creación de contenedores Docker para la implementación de aplicaciones.",
-      "Experiencia práctica en la aplicación de metodologías ágiles como Scrum y Kanban para la gestión eficiente de proyectos, basada en proyectos reales desarrollados durante el bootcamp.",
-      "Adquisición de habilidades para la resolución de problemas, toma de decisiones y manejo de situaciones bajo presión, aplicadas en el contexto de proyectos de desarrollo de software durante el bootcamp.",
+      "Completed practical fullstack training with JavaScript, React, Vue, APIs, Git, Docker, and responsive interfaces.",
+      "Built project demos in small teams using agile planning and iterative delivery.",
+      "Use frontend skills mainly to create clear demos for backend and automation projects.",
     ],
   },
 ];
 
-const testimonials = [
-/*   {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  }, */
-];
+const testimonials = [];
 
 const projects = [
   {
-    name: "Tienda Online",
+    name: "FastAPI Backend for Automated Lead Generation & Outreach System",
+    problem:
+      "Agencies, freelancers, B2B companies, and small sales teams often spend too much time collecting, cleaning, and preparing leads manually.",
+    solution:
+      "A backend system that collects, processes, stores, and prepares leads for outreach, with clean API endpoints and integration-ready records.",
     description:
-      "Este proyecto es un sitio web llamado MariFarma, que proporciona información y acceso a varios productos relacionados con la salud y el bienestar. Ofrece categorías como Medicamentos, Cuidado Natural, Hierbas y Ortopedia. El sitio web ofrece funcionalidades como selección de idioma, búsqueda de productos y añadir productos a favoritos y al carrito de compras.",
-    tags: [
-      {
-        name: "HTML5",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "CSS3",
-        color: "green-text-gradient",
-      },
-      {
-        name: "JavaScript",
-        color: "pink-text-gradient",
-      },
+      "Designed as a practical prospecting backend for teams that want a repeatable lead workflow before connecting a CRM, Google Sheets, or outreach tool.",
+    features: [
+      "Lead collection",
+      "Data cleaning and validation",
+      "Database storage",
+      "API endpoints",
+      "Outreach-ready lead records",
+      "CRM / Google Sheets integration ready",
+      "Background task support",
+      "AI personalization ready",
     ],
-    image: MariFarma,
-    source_code_link: "https://github.com/usertina/Marifarma.git",
+    tags: [
+      { name: "FastAPI", color: "blue-text-gradient" },
+      { name: "Python", color: "green-text-gradient" },
+      { name: "SQLAlchemy", color: "pink-text-gradient" },
+      { name: "PostgreSQL / SQLite", color: "blue-text-gradient" },
+      { name: "Background Tasks", color: "green-text-gradient" },
+      { name: "Web Scraping", color: "pink-text-gradient" },
+      { name: "OpenAI API optional", color: "blue-text-gradient" },
+      { name: "Docker optional", color: "green-text-gradient" },
+    ],
+    image: web,
+    demo_link: "#",
+    source_code_link: "#",
+    contact_link: "#contact",
   },
   {
-    name: "Music Player",
+    name: "FastAPI Backend for Internal Knowledge Base RAG System",
+    problem:
+      "Teams lose time searching through PDFs, notes, policies, and internal files when information is scattered across folders and tools.",
+    solution:
+      "A document-processing backend that lets users upload files, store searchable knowledge, and ask AI questions with source-aware answers.",
     description:
-      "Este proyecto es un reproductor de música simple construido utilizando JavaScript y la API de Web Audio (Usando métodos de Array: map(), filter(), find(), join(), sort(), indexOf())",
-    tags: [
-      {
-        name: "HTML5",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Bootstrap",
-        color: "green-text-gradient",
-      },
-      {
-        name: "JavaScript",
-        color: "pink-text-gradient",
-      },
+      "Built for small businesses that need a simple internal knowledge base MVP before investing in a larger AI platform.",
+    features: [
+      "Document upload",
+      "PDF/text processing",
+      "Chunking",
+      "Embeddings",
+      "Vector database storage",
+      "Semantic search",
+      "AI question-answering endpoint",
+      "Source-aware answers",
     ],
-    image: MusicPlayer,
-    source_code_link: "https://github.com/oussama2505/MusicPlayer_JS_WebAudioAPI.git",
-  },
-  {
-    name: "VueSport",
-    description:
-      "This website is created by students of the Peñascal F5 bootcamp for educational purposes. The entire project was developed in an estimated time of 2 weeks. The group was organized and worked with agile methodologies, organizing the group with its corresponding Scrum and Product Owner.",
     tags: [
-      {
-        name: "HTML5",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "TailwindCss",
-        color: "green-text-gradient",
-      },
-      {
-        name: "VueJs",
-        color: "pink-text-gradient",
-      },
+      { name: "FastAPI", color: "blue-text-gradient" },
+      { name: "Python", color: "green-text-gradient" },
+      { name: "OpenAI API", color: "pink-text-gradient" },
+      { name: "LangChain / LlamaIndex", color: "blue-text-gradient" },
+      { name: "Chroma / FAISS / Qdrant", color: "green-text-gradient" },
+      { name: "PostgreSQL optional", color: "pink-text-gradient" },
+      { name: "Docker optional", color: "blue-text-gradient" },
     ],
-    image: VueSport,
-    source_code_link: "https://github.com/oussama2505/vueSport.git",
-  },
-  {
-    name: "Restaurante Izarza",
-    description:
-      "This website is created by students of the Peñascal F5 bootcamp for educational purposes. The entire project was developed in an estimated time of 2 weeks. The group was organized and worked with agile methodologies, organizing the group with its corresponding Scrum and Product Owner.",
-    tags: [
-      {
-        name: "HTML",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "CSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Wordpress",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: Izarza,
-    source_code_link: "https://github.com/oussama2505/3D_Portafolio",
+    image: backend,
+    demo_link: "#",
+    source_code_link: "#",
+    contact_link: "#contact",
   },
 ];
 
