@@ -18,6 +18,21 @@ import {
   threejs,
 } from "../assets";
 
+const links = {
+  email: "mailto:oussama0608@outlook.es",
+  github: "https://github.com/oussama0608",
+  upwork: "https://www.upwork.com/freelancers/~0153f9c41073ea874f",
+  linkedin: "https://www.linkedin.com/in/oussama-brahmi-lurnova/",
+
+  leadGenDemo:
+    "https://www.upwork.com/freelancers/~0153f9c41073ea874f?p=2004258160348950528",
+  leadGenCode: "https://github.com/oussama0608/researcher-agent",
+
+  ragDemo:
+    "https://www.upwork.com/freelancers/~0153f9c41073ea874f?p=2003376149992239104",
+  ragCode: "https://github.com/oussama0608/hr-policy-bot",
+};
+
 export const navLinks = [
   { id: "", title: "Home" },
   { id: "about", title: "About" },
@@ -158,8 +173,8 @@ const projects = [
       { name: "Docker optional", color: "green-text-gradient" },
     ],
     image: web,
-    demo_link: "#",
-    source_code_link: "#",
+    demo_link: links.leadGenDemo,
+    source_code_link: links.leadGenCode,
     contact_link: "#contact",
   },
   {
@@ -190,10 +205,10 @@ const projects = [
       { name: "Docker optional", color: "blue-text-gradient" },
     ],
     image: backend,
-    demo_link: "#",
-    source_code_link: "#",
+    demo_link: links.ragDemo,
+    source_code_link: links.ragCode,
     contact_link: "#contact",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { links, services, technologies, experiences, testimonials, projects };

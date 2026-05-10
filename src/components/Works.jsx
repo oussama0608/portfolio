@@ -7,6 +7,8 @@ import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
+const isExternalLink = (link) => link && !link.startsWith("#");
+
 const ProjectCard = ({
   index,
   name,
@@ -20,15 +22,6 @@ const ProjectCard = ({
   source_code_link,
   contact_link,
 }) => {
-  const openLink = (link) => {
-    if (!link || link === "#") return;
-    if (link.startsWith("#")) {
-      window.location.hash = link;
-      return;
-    }
-    window.open(link, "_blank", "noreferrer");
-  };
-
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
@@ -47,16 +40,19 @@ const ProjectCard = ({
           />
 
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
-            <div
-              onClick={() => openLink(source_code_link)}
+            <a
+              href={source_code_link}
+              target='_blank'
+              rel='noopener noreferrer'
               className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+              aria-label={`View source code for ${name}`}
             >
               <img
                 src={github}
                 alt='source code'
                 className='w-1/2 h-1/2 object-contain'
               />
-            </div>
+            </a>
           </div>
         </div>
 
@@ -95,22 +91,27 @@ const ProjectCard = ({
         </div>
 
         <div className='mt-6 flex flex-wrap gap-3'>
-          <button
-            type='button'
-            onClick={() => openLink(demo_link)}
+          <a
+            href={demo_link}
+            target='_blank'
+            rel='noopener noreferrer'
             className='bg-[#915EFF] py-2 px-4 rounded-lg text-white text-[14px] font-semibold'
           >
             Watch Demo
-          </button>
-          <button
-            type='button'
-            onClick={() => openLink(source_code_link)}
+          </a>
+          <a
+            href={source_code_link}
+            target='_blank'
+            rel='noopener noreferrer'
             className='bg-black-100 py-2 px-4 rounded-lg text-white text-[14px] font-semibold'
           >
             View Code
-          </button>
+          </a>
           <a
             href={contact_link}
+            {...(isExternalLink(contact_link)
+              ? { target: "_blank", rel: "noopener noreferrer" }
+              : {})}
             className='bg-black-100 py-2 px-4 rounded-lg text-white text-[14px] font-semibold'
           >
             Contact Me

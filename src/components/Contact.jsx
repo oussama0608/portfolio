@@ -7,6 +7,7 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import { links } from "../constants";
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -81,27 +82,31 @@ const Contact = () => {
 
         <div className='mt-8 flex flex-wrap gap-3'>
           <a
-            href='mailto:your.email@example.com'
+            href={links.email}
             className='bg-[#915EFF] py-2 px-4 rounded-lg text-white text-[14px] font-semibold'
           >
-            Email me
+            Email Me
           </a>
           <a
-            href='#'
-            className='bg-tertiary py-2 px-4 rounded-lg text-white text-[14px] font-semibold'
-          >
-            Upwork profile
-          </a>
-          <a
-            href='https://github.com/oussama2505'
+            href={links.github}
             target='_blank'
-            rel='noreferrer'
+            rel='noopener noreferrer'
             className='bg-tertiary py-2 px-4 rounded-lg text-white text-[14px] font-semibold'
           >
             GitHub
           </a>
           <a
-            href='#'
+            href={links.upwork}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='bg-tertiary py-2 px-4 rounded-lg text-white text-[14px] font-semibold'
+          >
+            Upwork
+          </a>
+          <a
+            href={links.linkedin}
+            target='_blank'
+            rel='noopener noreferrer'
             className='bg-tertiary py-2 px-4 rounded-lg text-white text-[14px] font-semibold'
           >
             LinkedIn
